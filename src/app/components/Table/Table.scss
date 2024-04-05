@@ -1,0 +1,36 @@
+.table {
+  width: 100%;
+  font-size: 11px;
+
+  .MuiTable-root {
+    width: 100%;
+  }
+
+  .MuiTableHead-root {
+    .MuiTableCell-root {
+      background-color: hsl(var(--accent));
+    }
+  }
+
+  .MuiTableCell-root {
+    padding: 10px 12px;
+    font-size: 12px;
+    border-right: 1px solid hsl(var(--border));
+  }
+
+  .MuiTableBody-root {
+    .MuiTableRow-root {
+      &:hover {
+        .MuiTableCell-root {
+          background-color: hsl(var(--accent)) !important;
+        }
+      }
+
+      &:nth-child(odd) {
+        .MuiTableCell-root {
+          background-color: var(--accent-2);
+        }
+      }
+    }
+  }
+}

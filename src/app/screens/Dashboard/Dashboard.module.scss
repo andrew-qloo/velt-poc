@@ -1,0 +1,327 @@
+$borderColor: #e8eaed;
+
+.readOnly {
+  .button {
+    opacity: 0.2;
+  }
+
+  .panelHeader {
+    opacity: 0.2;
+  }
+
+  .react-resizable-handle {
+    opacity: 0.2;
+  }
+
+  .reactResizableHandle {
+    opacity: 0.2;
+  }
+}
+
+.addPanelModal {
+  min-width: 500px;
+  max-width: 680px;
+}
+
+.addPanelModalOptions {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 24px;
+}
+
+.addPanelModalOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid hsl(var(--border));
+
+  &:hover {
+    background-color: hsl(var(--accent));
+  }
+}
+
+.addPanelModalOptionActive {
+  border-color: hsl(var(--primary));
+}
+
+.addPanelModalOptionSvg {
+  width: 50px;
+  height: 50px;
+}
+
+.addPanelModalOptionRight {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 12px;
+}
+
+.addPanelModalOptionTitle {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.addPanelModalOptionDescription {
+  margin-top: 8px;
+  flex: 1;
+  font-size: 13px;
+  text-align: left;
+}
+
+.addPanelModalConfigure {
+  padding: 24px;
+}
+
+.panel {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 36px;
+  padding: 0 12px;
+  border-bottom: 0.2px solid $borderColor;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.panelHeaderLeft {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: grab;
+  }
+
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+.panelBody {
+  position: relative;
+  flex: 1;
+  overflow: auto;
+}
+
+.panelBodyCommentTarget {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+
+  > * {
+    pointer-events: all;
+  }
+}
+
+.panelBodyCommentTargetIsCommenting {
+  pointer-events: all;
+}
+
+.panelFooter {
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+  border-top: 0.2px solid $borderColor;
+}
+
+.panelFooterLeft,
+.panelFooterRight {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.panelFooterLeft {
+  flex: 1;
+
+  .panelFooterButton {
+    &:last-child {
+      border-right: 0.2px solid $borderColor;
+    }
+  }
+}
+
+.panelFooterRight {
+  .panelFooterButton {
+    &:first-child {
+      border-left: 0.2px solid $borderColor;
+    }
+  }
+}
+
+.panelFooterButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  overflow: hidden;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    background-color: #f8fafc;
+    cursor: pointer;
+  }
+
+  & + & {
+    border-left: 0.2px solid $borderColor;
+  }
+}
+
+.panelFooterButtonIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.panelFooterButtonBadge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  background-color: red;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.panelTypePicker {
+  padding: 2px;
+}
+
+.panelTypePickerItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 12px;
+  padding: 4px 4px;
+  width: 100%;
+
+  &:hover {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+  }
+}
+
+.panelTypePickerItemIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.queryBuilder {
+  position: relative;
+  background-color: #fff;
+}
+
+.queryBuilderFooter {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px;
+  border-top: 1px solid hsl(var(--border));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.queryBuilderFooterItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px;
+  height: 32px;
+  white-space: nowrap;
+  border-left: 1px solid hsl(var(--border));
+  font-size: 11px;
+
+  &:last-child {
+    border-right: 1px solid hsl(var(--border));
+  }
+}
+
+.queryBuilderFooterItemLabel {
+  margin-right: 4px;
+  font-weight: bold;
+}
+
+.queryBuilderFooterItemValue {
+}
+
+.reactResizableHandle {
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+}
+
+.tabsAddButton {
+}
+
+.tabsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.tabsButtonActive {
+  background-color: #fff;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 12px;
+  padding: 0 10px;
+}
+
+.toolbarRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.toolbarItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+
+  & + .toolbarItem {
+    margin-left: 12px;
+  }
+}
+
+.toolbarLeft {
+  flex: 1;
+}

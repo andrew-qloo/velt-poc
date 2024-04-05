@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  padding: 0 40px;
+  background-color: #142850;
+}
+
+.left {
+  color: #00cc99;
+  font-family: NewYorkNineteenSixty;
+  font-size: 26px;
+}

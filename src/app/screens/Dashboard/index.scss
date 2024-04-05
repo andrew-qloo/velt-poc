@@ -1,0 +1,23 @@
+@import "react-grid-layout";
+
+$blue: #2878ff;
+$borderColor: #e8eaed;
+
+.button {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: $blue;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: darken($blue, 10);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: darken($blue, 30);
+  }
+}
